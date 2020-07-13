@@ -16,16 +16,8 @@ public class CoronaVirusTest extends BaseTest{
     public void openCoronavirusPage() throws SQLException {
 
         acceptCookiesPage = new AcceptCookiesPage(driver);
-
-        mainPage = acceptCookiesPage.goToMainPage();
+       mainPage = acceptCookiesPage.goToMainPage();
         mainPage.gotoCoronavirus();
         Assert.assertTrue(driver.getTitle().contains("Coronavirus"));
-
-
-
-
-
-       /* Set<String> windowHandlers = driver.getWindowHandles();
-        System.out.println(windowHandlers.size());*/
-    }
+   }
 }

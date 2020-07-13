@@ -15,7 +15,7 @@ public class WebDriverFactory  implements GetDriver{
       return new ChromeDriver();
     };
     private static final Supplier<WebDriver> fireFoxSupplier = ()->{
-        System.setProperty("webdriver.gecko.driver","src\\test\\resources\\geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver","D:\\education\\drivers\\geckodriver.exe");
         return new FirefoxDriver();
     };
 
