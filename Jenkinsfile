@@ -3,19 +3,25 @@ pipeline {
     stages {
         stage('Starting Grid') {
             steps {
-                bat "docker-compose up"
+                   dir('D:\\education\\Git\\projects\\project1'){
+                   bat "docker-compose up -d selenium-hub chrome firefox opera"
+                   }
+
             }
         }
         stage('Running test') {
             steps {
-                        bat "mvn test"
+                     dir('D:\\education\\Git\\projects\\project1'){
+                       bat "mvn test"
+                     }
             }
         }
     }
     post{
         always{
-             archiveArtifacts artifacts: 'output/**'
+             dir('D:\\education\\Git\\projects\\project1'){
              bat "docker-compose down"
         }
+    }
     }
 }
