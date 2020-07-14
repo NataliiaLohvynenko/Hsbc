@@ -3,6 +3,8 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.AcceptCookiesPage;
+import pages.MainPage;
 
 import java.sql.SQLException;
 
